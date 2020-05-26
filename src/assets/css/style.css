@@ -1,0 +1,299 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+* {
+margin: 0;
+padding: 0;
+}
+html , body{
+height: 100%; width:100%;
+}
+
+body{font-family: 'Roboto', sans-serif; color:#333; font-weight:400;}
+body{ margin:0; padding:0;}
+#jquery-script-menu {
+	position: absolute;
+	height: 90px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	border-top: 5px solid #316594;
+	background: #fff;
+	-moz-box-shadow: 0 2px 3px 0 rgba(0,0,0,.16);
+	-webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.16);
+	box-shadow: 0 2px 3px 0 rgba(0,0,0,.16);
+	z-index: 999999;
+	padding: 10px 0;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box
+}
+.jquery-script-center {
+	max-width: 960px;
+	margin: 0 auto
+}
+.jquery-script-center ul {
+	width: 212px;
+	float: left;
+	line-height: 45px;
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+.jquery-script-center a {
+	text-decoration: none
+}
+.jquery-script-ads {
+	max-width: 728px;
+	height: 90px;
+	float: right
+}
+.jquery-script-clear {
+	clear: both;
+	height: 0
+}
+#carbonads {
+	display: block;
+	overflow: hidden;
+	max-width: 728px;
+	position: relative;
+	font-size: 22px;
+	box-sizing: content-box
+}
+#carbonads>span {
+	display: block
+}
+#carbonads a {
+	color: #4078c0;
+	text-decoration: none
+}
+#carbonads a:hover {
+	color: #3664a3
+}
+.carbon-wrap {
+	display: flex;
+	align-items: center
+}
+.carbon-img {
+	display: block;
+	margin: 0;
+	line-height: 1
+}
+.carbon-img img {
+	display: block;
+	height: 90px;
+	width: auto
+}
+.carbon-text {
+	display: block;
+	padding: 0 1em;
+	line-height: 1.35;
+	text-align: left
+}
+.carbon-poweredby {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 6px 10px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+	font-weight: 600;
+	font-size: 8px;
+	border-top-left-radius: 4px;
+	line-height: 1;
+	color: #aaa!important
+}
+@media only screen and (min-width:320px) and (max-width:759px) {
+.carbon-text {
+	font-size: 14px
+}
+}
+@media only screen and (max-width:1023px) {
+.jquery-script-ads {
+	display: none
+}
+}
+
+
+
+#msform {
+width: 1140px;
+margin: 70px auto;
+text-align: center;
+position: relative;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	position:relative;
+
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+padding: 15px;
+border: 1px solid #ccc;
+border-radius: 3px;
+margin-bottom: 10px;
+width: 100%;
+box-sizing: border-box;
+font-family: montserrat;
+color: #2C3E50;
+font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+display:block;
+	background: #6912F7;
+	font-weight: 400;
+	color: white;
+	border: 0 none;
+	border-radius: 0;
+	cursor: pointer;
+	padding: 20px 5px;
+	margin: 10px 5px;
+	font-size: 15px;
+}
+
+/*headings*/
+.fs-title {
+font-size: 18px;
+text-transform: capitalize;
+color: #2C3E50;
+margin-bottom: 10px; text-align:left;
+}
+.fs-subtitle {
+font-weight: normal;
+font-size: 13px;
+color: #666;
+margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	/* overflow: hidden; */
+	/* counter-reset: step; */
+}
+#progressbar li {
+	list-style-type: none;
+	color: #252525;
+	text-transform: capitalize;
+	font-size: 18px;
+	width: 25%;
+	float: left;
+	position: relative;
+	font-weight: ;
+}
+#progressbar li em {
+	margin-top: -80px;
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+#progressbar li:before {
+content: counter(step);
+counter-increment: step;
+width: 35px;
+line-height: 35px;
+display: block;
+font-size: 10px;
+color: #333;text-indent:-9999px;
+background: #C4C4C4;
+border-radius:100%;
+margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+content: '';
+width: 100%;
+height: 2px;
+background:#DBDBDB;
+position: absolute;
+left: -50%;
+top: 17px;
+z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+/*connector not needed before the first step*/
+content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+background: #C3A0FC;
+color: white;
+}
+
+.pur_ple {
+	background: #6912F7;
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	display: inline-block;
+	position: absolute;
+	top: 44%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.div1{ display:inline-block; width:100%; margin:10px 0;}
+.div1 label{ display:block; font-size:14px; font-weight:400; color:#000; text-align:left; margin-bottom:10px;}
+.div1 input[type="text"] , .div1 input[type="email"] {
+width:100%; display:inline-block; border:1px solid #E4E4E4; border-radius:10px; line-height:45px; height:45px; padding:10px 12px; font-size:16px;color:#606060; font-weight:500;	
+}
+.step_1{ margin-top:50px !important; display:inline-block; width:100%;}

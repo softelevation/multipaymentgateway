@@ -1,0 +1,12 @@
+
+<!-- button *ngIf="!strip_status" (click)="click_stripe()">Click Stripe</button>
+<button *ngIf="!paypal_status" (click)="click_paypal()">Click Paypal</button>
+<app-stripe *ngIf="strip_status"></app-stripe>
+<br><br>
+<app-paypal *ngIf="paypal_status"></app-paypal -->
+
+<app-header></app-header>
+
+<app-user-details></app-user-details>
+
+<router-outlet></router-outlet>
