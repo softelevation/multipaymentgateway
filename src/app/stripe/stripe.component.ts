@@ -50,12 +50,12 @@ export class StripeComponent implements OnInit {
           });
           this.card.mount('#card-element');
         }
-      })	;
+      });
   }
   
    buy() {
-    // const name = this.stripeTest.get('name').value;
-    const name = 'admin07';
+    const name = this.stripeTest.get('name').value;
+    // const name = 'admin07';
 
     this.stripeService.createToken(this.card, { name }).subscribe(obj => {
         if (obj) {

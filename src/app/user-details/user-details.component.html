@@ -1,29 +1,29 @@
-<form id="msform">		
+<form id="msform" [formGroup]="user_detail" (ngSubmit)="onSubmit()">		
 	<fieldset>
 		<h2 class="fs-title">Enter Your Details</h2>
 		<div class="div1">
 			<label>First Name</label>
-			<input type="text" name="first_name" placeholder="Email" />
+			<input type="text" name="first_name" formControlName="first_name" placeholder="Email" />
 		</div>
 		<div class="div1">
 			<label>Last Name</label>
-			<input type="text" name="last_name" placeholder="Last Name" />
+			<input type="text" name="last_name" formControlName="last_name" placeholder="Last Name" />
 		</div>
 		<div class="div1">
 			<label>Email Address</label>
-			<input type="text" name="email" placeholder="Email" />
+			<input type="text" name="email" formControlName="email" placeholder="Email" />
 		</div>
 		<div class="div1">
 			<label>Phone Number</label>
-			<input type="text" name="phone" placeholder="0000000000" />
+			<input type="text" name="phone" formControlName="phone" placeholder="0000000000" />
 		</div>
 		<div class="div1">
 			<label>Description of Payment</label>
-			<input type="text" name="amount" placeholder="Amount in USD" />
+			<input type="text" name="amount" formControlName="amount" placeholder="Amount in USD" />
 		</div>
-		<input type="button" name="next" class="next action-button" value="Make Payment" />
+		<input type="submit" class="next action-button" value="Make Payment" />
 	</fieldset>
-	<fieldset>
+	<!-- fieldset>
 		<h2 class="fs-title">Social Profiles</h2>
 		<h3 class="fs-subtitle">Your presence on the social network</h3>
 		<input type="text" name="twitter" placeholder="Twitter" />
@@ -52,6 +52,6 @@
 		<textarea name="address" placeholder="Address"></textarea>
 		<input type="button" name="previous" class="previous action-button" value="Previous" />
 		<input type="submit" name="submit" class="submit action-button" value="Submit" />
-	</fieldset>
+	</fieldset -->
 
 </form>

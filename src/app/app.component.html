@@ -5,8 +5,11 @@
 <br><br>
 <app-paypal *ngIf="paypal_status"></app-paypal -->
 
-<app-header></app-header>
+<div class="container">
+	<app-header></app-header>
 
-<app-user-details></app-user-details>
+	<app-user-details *ngIf="router.url == '/'"></app-user-details>
 
-<router-outlet></router-outlet>
+	<router-outlet></router-outlet>
+
+</div>

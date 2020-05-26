@@ -1,1 +1,38 @@
-<p>payment-details works!</p>
+<form id="msform">		
+	<h2 class="fs-title">Select your preferred method for payment</h2>
+	<div class="d-flex" id="wrapper">
+		
+		
+		<div class="bg-light border-right" id="sidebar-wrapper">
+		  
+		  <div class="list-group list-group-flush">
+			<a href="javascrpt:void(0)" (click)="click_stripe()" class="list-group-item list-group-item-action bg-light"><img src="assets/img/1.jpg" class="payment_image"/></a>
+			<a href="javascrpt:void(0)" (click)="click_paypal()" class="list-group-item list-group-item-action bg-light"><img src="assets/img/2.jpg" class="payment_image"/></a>
+		  </div>
+		</div>
+	
+		<div id="page-content-wrapper">
+				<div class="container-fluid"><br><br>
+					<div class="payment_text">
+						<h6>Credit & Debit cards </h6>
+						<p>Trangectin may bee apply </p>
+					</div>
+					<div class="payment_image">
+						<img src="assets/img/im6.jpg" class="payment_image"/>
+					</div>
+				</div>
+				
+				<div class="container-fluid"><br><br>
+					<app-stripe *ngIf="stripe_status"></app-stripe>
+					<app-paypal *ngIf="paypal_status"></app-paypal>
+				</div>
+  
+		</div>
+	</div>
+		<!-- div class="sidebar">
+			
+			<img src="assets/img/1.jpg" class="payment_image"/>
+			<img src="assets/img/1.jpg" class="payment_image"/>
+		</div -->
+
+</form>
