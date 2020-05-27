@@ -53,31 +53,30 @@ export class StripeComponent implements OnInit {
       });
   }
   
-   buy() {
+  buy() {
     const name = this.stripeTest.get('name').value;
-    // const name = 'admin07';
 
     this.stripeService.createToken(this.card, { name }).subscribe(obj => {
-        if (obj) {
-          console.log(obj);
-          // this.http.post("http://localhost:3000/payme",{
-          //   token : obj.token.id
-          // }).subscribe(
-          //   (res)=>{
-          //     console.log("The response from server is ",res);
-          //     console.log('Payment Done')
-          //   },
-          //   (err)=>{
-          //     console.log('The error is ',err)
-          //   })
+			if (obj) {
+			  console.log(obj);
+			  // this.http.post("http://localhost:3000/payme",{
+			  //   token : obj.token.id
+			  // }).subscribe(
+			  //   (res)=>{
+			  //     console.log("The response from server is ",res);
+			  //     console.log('Payment Done')
+			  //   },
+			  //   (err)=>{
+			  //     console.log('The error is ',err)
+			  //   })
 
 
 
-        } else {
-// Error creating the token
-          console.log("Error comes ");
-        }
-      });
+			} else {
+	// Error creating the token
+			  console.log("Error comes ");
+			}
+		  });
   }
 
 }

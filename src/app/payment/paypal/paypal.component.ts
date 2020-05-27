@@ -14,7 +14,8 @@ export class PaypalComponent implements OnInit {
   ngOnInit() {
 	this.initConfig();
   }
-  
+
+ 
   initConfig(){
         this.payPalConfig = {
             currency: 'EUR',
@@ -76,5 +77,6 @@ export class PaypalComponent implements OnInit {
             }
         };
     }
+
 
 }

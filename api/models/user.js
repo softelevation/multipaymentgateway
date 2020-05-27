@@ -1,13 +1,23 @@
-const mongoose = require('mongoose');
+var db = require("../db");
+let model = {
+    getUser: (cb) => {
+        return db.query("SELECT * FROM users", cb)
+    },
+	getUserId: (id, cb) => {
+        return db.query("SELECT * FROM users WHERE id=?", [id], cb)
+    },
+	addUser: (input, cb) => {
+		let data = {
+            first_name: input.first_name,
+            last_name: input.last_name,
+            email: input.email,
+            phone: input.phone,
+            amount: input.amount
+        };
+		return db.query("INSERT INTO users SET ?", [data], cb);
+	}
+}
 
-const userSchema = new mongoose.Schema({
-	_id:mongoose.Schema.Types.ObjectId,
-	name: {type:String, required:true},
-	email: {type:String,required:true,unique:true},
-	password: {type:String,required:true},
-	created_at : {type: Date, default: Date.now},
-	is_deleted: {type: Number, default: 0}
-});
-
-const Usermodel = mongoose.model("User", userSchema, "users");
-module.exports = Usermodel;
+module.exports = model;
+	
+	

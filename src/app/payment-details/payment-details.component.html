@@ -1,38 +1,195 @@
-<form id="msform">		
-	<h2 class="fs-title">Select your preferred method for payment</h2>
-	<div class="d-flex" id="wrapper">
+<fieldset class="div_c2">
+	<div class="tit">Select your preferred method for payment</div>
+		<div class="resp-tabs-container hor_1">
 		
-		
-		<div class="bg-light border-right" id="sidebar-wrapper">
-		  
-		  <div class="list-group list-group-flush">
-			<a href="javascrpt:void(0)" (click)="click_stripe()" class="list-group-item list-group-item-action bg-light"><img src="assets/img/1.jpg" class="payment_image"/></a>
-			<a href="javascrpt:void(0)" (click)="click_paypal()" class="list-group-item list-group-item-action bg-light"><img src="assets/img/2.jpg" class="payment_image"/></a>
-		  </div>
-		</div>
-	
-		<div id="page-content-wrapper">
-				<div class="container-fluid"><br><br>
-					<div class="payment_text">
-						<h6>Credit & Debit cards </h6>
-						<p>Trangectin may bee apply </p>
-					</div>
-					<div class="payment_image">
-						<img src="assets/img/im6.jpg" class="payment_image"/>
-					</div>
-				</div>
+		<div id="ChildVerticalTab_1">
+				<ul class="resp-tabs-list ver_1">
+							<li><img src="assets/img/1.jpg"><span><img src="assets/img/tick.jpg" width="29" height="29"></span></li>
+							<li><img src="assets/img/2.jpg"></li>
+							<li><img src="assets/img/3.jpg"></li>
+							<li><img src="assets/img/4.jpg"></li>
+							<li><img src="assets/img/5.jpg"></li>
+				</ul>
 				
-				<div class="container-fluid"><br><br>
-					<app-stripe *ngIf="stripe_status"></app-stripe>
-					<app-paypal *ngIf="paypal_status"></app-paypal>
-				</div>
-  
+		<div class="resp-tabs-container ver_1">
+		<div>
+						
+		<div class="form1">
+			<h1>Credit & Debit Cards <span>Transaction fee may apply</span></h1>
+			<img src="assets/img/im6.jpg">
 		</div>
-	</div>
-		<!-- div class="sidebar">
-			
-			<img src="assets/img/1.jpg" class="payment_image"/>
-			<img src="assets/img/1.jpg" class="payment_image"/>
-		</div -->
+			<div class="left_right">
+					<app-stripe></app-stripe>
+					
+					<!-- div class="div1">
+						<label>Cardholder Name</label>
+						<input type="text" name="email" placeholder="Email">
+					</div>
 
-</form>
+					<div class="div1">
+						<label>Card Number</label>
+						<input type="text" name="email" placeholder="1234">
+						<img src="assets/img/im7.jpg">
+					</div>
+
+					<div class="div1">
+						<div class="fifty">
+							<label>Start Date</label>
+							<select>
+							<option value="1">yyyy</option>
+							</select>
+						</div>
+						<div class="fifty">
+							<label>End Date</label>
+							<select>
+							<option value="1">mm</option>
+							</select>
+						</div>
+
+						<div class="fifty no_right">
+							<label>CVV</label>
+							<input type="text" name="email" placeholder="123" />
+						</div>
+						<div class="digit"><img src="assets/img/ico.jpg">3 digits</div>
+						<div class="checkb">
+							<input type="checkbox" id="checkbox" name="checkbox"><em>I have read and accept the terms of use , ruldes of flight and privacy policy.</em>
+						</div>
+					</div -->
+
+			</div>
+		</div>
+		
+		
+		<div>
+		<div class="form1"><h1>Paypal Payment Method <span>Transaction fee may apply</span></h1>	<img src="assets/img/p2.jpg"></div>
+				
+		<div class="tit less_margin">Choose your card</div>
+				
+			<app-paypal></app-paypal>
+			
+		<!-- div class="custom_DIV">
+			<label class="c_check">
+			  <input type="radio" checked="checked" name="radio">
+			  <span class="checkmark"></span>
+			</label>
+			<div class="join_D">
+				<img src="assets/img/v1.jpg">
+				<em>Visa</em>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="custom_DIV">
+			<label class="c_check">
+			  <input type="radio" checked="checked" name="radio">
+			  <span class="checkmark"></span>
+			</label>
+			<div class="join_D">
+				<img src="assets/img/v2.jpg">
+				<em>Master Card</em>
+			</div>
+		</div -->
+			<div class="clearfix"></div>
+			<a href="#" class="c_d">+ Add credit/debit card </a>
+		</div>
+		
+		
+		
+		<div>
+			<div class="form1">
+				<h1>BTC Payment <span>Transaction fee may apply</span></h1>
+				<img src="assets/img/b2.jpg">
+			</div>
+			<div class="tit less_margin">This order expire in <em>7:08</em></div>
+			<div class="div_part">
+				<h1>Amount</h1>
+				<h2>273836 BTC</h2>
+				<h1>Address</h1>
+				<h3>fukvnefidv48464dk</h3>
+			</div>
+			
+			<div class="div_part2">
+				<img src="assets/img/barcode.jpg">
+			</div>
+			<div class="clearfix"></div>
+		</div>
+			
+		
+		<div>
+			<div class="form1">
+			<h1>Other card <span>Transaction fee may apply</span></h1>
+			<img src="assets/img/b3.jpg">
+			</div>
+			<div class="tit less_margin">Choose your card</div>
+			<div class="cards">
+				<ul>
+				<li><img src="assets/img/im8.jpg"></li>
+				<li><img src="assets/img/im9.jpg"></li>
+				<li><img src="assets/img/im10.jpg"></li>
+				<li><img src="assets/img/im11.jpg"></li>
+				<li><img src="assets/img/im12.jpg"></li>
+				
+					<li><img src="assets/img/im13.jpg"></li>
+				<li><img src="assets/img/im14.jpg"></li>
+				<li><img src="assets/img/im15.jpg"></li>
+				<li><img src="assets/img/im16.jpg"></li>
+				<li><img src="assets/img/im17.jpg"></li>
+				
+					<li><img src="assets/img/im18.jpg"></li>
+				<li><img src="assets/img/im19.jpg"></li>
+				<li><img src="assets/img/im20.jpg"></li>
+				<li><img src="assets/img/im21.jpg"></li>
+				<li><img src="assets/img/im22.jpg"></li>
+				</ul>
+			</div>
+			
+		</div>
+		
+		
+		<div>
+			<div class="form1">
+				<h1>Trustly Payment <span>Transaction fee may apply</span></h1>
+				<img src="assets/img/b4.jpg">
+			</div>
+			<div class="tit less_margin">Choose your card</div>
+			<div class="div_part">
+				<h1>Amount</h1>
+				<h3 class="b20">$100.00</h3>
+			</div>
+			<div class="left_right zero">
+			<div class="div1">
+				<div class="fifty widTH">
+					<label>First Name</label>
+					<input type="text" name="email" placeholder="123" />
+				</div>
+				<div class="fifty widTH">
+					<label>Last Name</label>
+					<input type="text" name="email" placeholder="123" />
+				</div>
+			</div>
+				
+			<div class="div1">
+				<label>Email</label>
+				<input type="email" name="email" placeholder="Email">
+			</div>
+			<div class="div1">
+				<label>Currency</label>
+				<input type="text" name="email" placeholder="Email">
+			</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+			
+			
+			
+			
+			
+		</div>
+		</div>
+		
+		
+
+
+
+	</div>
+	<!-- input type="button" name="next" class="next action-button forwrd" value="Pay Now" / -->
+</fieldset>

@@ -1,57 +1,36 @@
-<form id="msform" [formGroup]="user_detail" (ngSubmit)="onSubmit()">		
-	<fieldset>
+<form id="msform" [formGroup]="user_detail" (ngSubmit)="onSubmit()">
+	<fieldset class="div_c">
 		<h2 class="fs-title">Enter Your Details</h2>
 		<div class="div1">
 			<label>First Name</label>
-			<input type="text" name="first_name" formControlName="first_name" placeholder="Email" />
+			<input type="text" name="first_name" formControlName="first_name" placeholder="First name" />
+			<div *ngIf="submitted && fBlog.first_name.errors && fBlog.first_name.errors.required" class="text-danger">First name is required.</div>
 		</div>
+		
 		<div class="div1">
 			<label>Last Name</label>
 			<input type="text" name="last_name" formControlName="last_name" placeholder="Last Name" />
+			<div *ngIf="submitted && fBlog.last_name.errors && fBlog.last_name.errors.required" class="text-danger">Last name is required.</div>
 		</div>
+
 		<div class="div1">
 			<label>Email Address</label>
 			<input type="text" name="email" formControlName="email" placeholder="Email" />
+			<div *ngIf="submitted && fBlog.email.errors && fBlog.email.errors.required" class="text-danger">Email Address is required.</div>
 		</div>
+
 		<div class="div1">
 			<label>Phone Number</label>
 			<input type="text" name="phone" formControlName="phone" placeholder="0000000000" />
+			<div *ngIf="submitted && fBlog.phone.errors && fBlog.phone.errors.required" class="text-danger">Phone Number is required.</div>
 		</div>
+
 		<div class="div1">
 			<label>Description of Payment</label>
 			<input type="text" name="amount" formControlName="amount" placeholder="Amount in USD" />
+			<div *ngIf="submitted && fBlog.amount.errors && fBlog.amount.errors.required" class="text-danger">Description of Payment is required.</div>
 		</div>
-		<input type="submit" class="next action-button" value="Make Payment" />
+		
+			<input type="submit" class="next action-button" value="Make Payment" />
 	</fieldset>
-	<!-- fieldset>
-		<h2 class="fs-title">Social Profiles</h2>
-		<h3 class="fs-subtitle">Your presence on the social network</h3>
-		<input type="text" name="twitter" placeholder="Twitter" />
-		<input type="text" name="facebook" placeholder="Facebook" />
-		<input type="text" name="gplus" placeholder="Google Plus" />
-		<input type="button" name="previous" class="previous action-button" value="Previous" />
-		<input type="button" name="next" class="next action-button" value="Next" />
-	</fieldset>
-	<fieldset>
-		<h2 class="fs-title">Personal Details</h2>
-		<h3 class="fs-subtitle">We will never sell it</h3>
-		<input type="text" name="fname" placeholder="First Name" />
-		<input type="text" name="lname" placeholder="Last Name" />
-		<input type="text" name="phone" placeholder="Phone" />
-		<textarea name="address" placeholder="Address"></textarea>
-		<input type="button" name="previous" class="previous action-button" value="Previous" />
-		<input type="button" name="next" class="next action-button" value="Next" />
-	</fieldset>
-
-	<fieldset>
-		<h2 class="fs-title">Personal Details</h2>
-		<h3 class="fs-subtitle">We will never sell it</h3>
-		<input type="text" name="fname" placeholder="First Name" />
-		<input type="text" name="lname" placeholder="Last Name" />
-		<input type="text" name="phone" placeholder="Phone" />
-		<textarea name="address" placeholder="Address"></textarea>
-		<input type="button" name="previous" class="previous action-button" value="Previous" />
-		<input type="submit" name="submit" class="submit action-button" value="Submit" />
-	</fieldset -->
-
 </form>

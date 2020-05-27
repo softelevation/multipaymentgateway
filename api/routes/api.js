@@ -5,6 +5,7 @@ apiController = require('../controllers/api.controller');
 
 
 router.get('/',apiController.defaultUrl);
+router.post('/',apiController.postUser);
 
 
 

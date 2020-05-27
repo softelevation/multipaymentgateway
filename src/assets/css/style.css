@@ -3,19 +3,7 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -24,8 +12,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
@@ -37,8 +24,7 @@ ol, ul {
 blockquote, q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before, blockquote:after, q:before, q:after {
 	content: '';
 	content: none;
 }
@@ -47,15 +33,26 @@ table {
 	border-spacing: 0;
 }
 * {
-margin: 0;
-padding: 0;
+	margin: 0;
+	padding: 0;
 }
-html , body{
-height: 100%; width:100%;
+html, body {
+	height: 100%;
+	width: 100%;
 }
-
-body{font-family: 'Roboto', sans-serif; color:#333; font-weight:400;}
-body{ margin:0; padding:0;}
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #333;
+	font-weight: 400;
+}
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
 #jquery-script-menu {
 	position: absolute;
 	height: 90px;
@@ -97,6 +94,12 @@ body{ margin:0; padding:0;}
 	clear: both;
 	height: 0
 }
+
+.text-danger{
+	float: left;
+    color: #dc3545!important;
+}
+
 #carbonads {
 	display: block;
 	overflow: hidden;
@@ -160,46 +163,53 @@ body{ margin:0; padding:0;}
 	display: none
 }
 }
-
-
-
-#msform {
-width: 1140px;
-margin: 70px auto;
-text-align: center;
-position: relative;
+.payment_msform {
+	width: 1140px;
+	margin: 70px auto 0;
+	text-align: center;
+	position: relative;
 }
-#msform fieldset {
+.payment_msform fieldset {
 	background: white;
 	border: 0 none;
 	border-radius: 3px;
 	padding: 20px 30px;
 	box-sizing: border-box;
 	width: 100%;
-	max-width: 600px;
+	position: relative;
+}
+.div_c {
+	max-width: 700px;
 	margin: 0 auto;
-	position:relative;
-
+}
+.div_c2 {
+	max-width: 900px;
+	margin: 0 auto;
 }
 /*Hide all except first fieldset*/
-#msform fieldset:not(:first-of-type) {
-display: none;
+.payment_msform fieldset:not(:first-of-type) {
+	display: none;
 }
 /*inputs*/
-#msform input, #msform textarea {
-padding: 15px;
-border: 1px solid #ccc;
-border-radius: 3px;
-margin-bottom: 10px;
-width: 100%;
-box-sizing: border-box;
-font-family: montserrat;
-color: #2C3E50;
-font-size: 13px;
+.payment_msform input, .payment_msform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
 }
 /*buttons*/
-#msform .action-button {
-display:block;
+
+.stripebutton {
+	width: 100%;
+}
+
+.payment_msform .action-button {
+	display: block;
 	background: #6912F7;
 	font-weight: 400;
 	color: white;
@@ -210,25 +220,23 @@ display:block;
 	margin: 10px 5px;
 	font-size: 15px;
 }
-
 /*headings*/
 .fs-title {
-font-size: 18px;
-text-transform: capitalize;
-color: #2C3E50;
-margin-bottom: 10px; text-align:left;
+	font-size: 18px;
+	text-transform: capitalize;
+	color: #2C3E50;
+	margin-bottom: 10px;
+	text-align: left;
 }
 .fs-subtitle {
-font-weight: normal;
-font-size: 13px;
-color: #666;
-margin-bottom: 20px;
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
 }
 /*progressbar*/
 #progressbar {
-	margin-bottom: 30px;
-	/* overflow: hidden; */
-	/* counter-reset: step; */
+	margin-bottom: 30px;/* overflow: hidden; *//* counter-reset: step; */
 }
 #progressbar li {
 	list-style-type: none;
@@ -238,48 +246,47 @@ margin-bottom: 20px;
 	width: 25%;
 	float: left;
 	position: relative;
-	font-weight: ;
+ font-weight:;
 }
 #progressbar li em {
 	margin-top: -80px;
 	float: left;
 	width: 100%;
-	text-align: center;
 }
 #progressbar li:before {
-content: counter(step);
-counter-increment: step;
-width: 35px;
-line-height: 35px;
-display: block;
-font-size: 10px;
-color: #333;text-indent:-9999px;
-background: #C4C4C4;
-border-radius:100%;
-margin: 0 auto 5px auto;
+	content: counter(step);
+	counter-increment: step;
+	width: 35px;
+	line-height: 35px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	text-indent: -9999px;
+	background: #C4C4C4;
+	border-radius: 100%;
+	margin: 0 auto 5px auto;
 }
 /*progressbar connectors*/
 #progressbar li:after {
-content: '';
-width: 100%;
-height: 2px;
-background:#DBDBDB;
-position: absolute;
-left: -50%;
-top: 17px;
-z-index: -1; /*put it behind the numbers*/
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: #DBDBDB;
+	position: absolute;
+	left: -50%;
+	top: 17px;
+	z-index: -1; /*put it behind the numbers*/
 }
 #progressbar li:first-child:after {
-/*connector not needed before the first step*/
-content: none;
+	/*connector not needed before the first step*/
+	content: none;
 }
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before, #progressbar li.active:after {
-background: #C3A0FC;
-color: white;
+	background: #C3A0FC;
+	color: white;
 }
-
 .pur_ple {
 	background: #6912F7;
 	width: 20px;
@@ -289,11 +296,406 @@ color: white;
 	position: absolute;
 	top: 44%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 }
-.div1{ display:inline-block; width:100%; margin:10px 0;}
-.div1 label{ display:block; font-size:14px; font-weight:400; color:#000; text-align:left; margin-bottom:10px;}
-.div1 input[type="text"] , .div1 input[type="email"] {
-width:100%; display:inline-block; border:1px solid #E4E4E4; border-radius:10px; line-height:45px; height:45px; padding:10px 12px; font-size:16px;color:#606060; font-weight:500;	
+.div1 {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	margin: 10px 0;
 }
-.step_1{ margin-top:50px !important; display:inline-block; width:100%;}
+.div1 label {
+	display: block;
+	font-size: 14px;
+	font-weight: 400;
+	color: #000;
+	text-align: left;
+	margin-bottom: 10px;
+}
+.div1 input[type="text"], .div1 input[type="email"] {
+	width: 100%;
+	display: inline-block;
+	border: 1px solid #E4E4E4;
+	border-radius: 10px;
+	line-height: 50px;
+	height: 50px;
+	padding: 10px 12px;
+	font-size: 16px;
+	color: #606060;
+	font-weight: 500;
+}
+.left_right .div1 img {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.step_1 {
+	margin-top: 50px !important;
+	display: inline-block;
+	width: 100%;
+}
+.form1 {
+	display: inline-block;
+	width: 100%;
+	box-shadow: 0px 11px 20px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 11px 20px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0px 11px 20px rgba(0,0,0,0.1);
+	-ms-box-shadow: 0px 11px 20px rgba(0,0,0,0.1);
+	padding: 0.8rem 1rem;
+	margin-bottom: 2rem;
+}
+.form1 h1 {
+	float: left;
+	color: #272750;
+	font-size: 13px;
+	text-align: left;
+	font-weight: 400;
+}
+.form1 h1 span {
+	display: block;
+	text-align: left;
+	font-size: 12px;
+	margin-top: 5px;
+	color: #C7C7C7;
+}
+.form1 img {
+	float: right;
+	max-width: 200px !important;
+}
+.tit {
+	font-size: 22px;
+	text-transform: capitalize;
+	color: #2C3E50;
+	margin-bottom: 50px;
+	text-align: left;
+	font-weight: 300;
+}
+.left_right {
+	display: inline-block;
+	width: 100%;
+	padding: 0 15px;
+}
+.left_right .div1 img {
+	position: absolute;
+	right: 7px;
+	top: 32px;
+}
+.left_right input:focus {
+	box-shadow: 0px 0px 1px 2px #6912F7;
+	-moz-box-shadow: 0px 0px 1px 2px #6912F7;
+	-webkit-box-shadow: 0px 0px 1px 2px #6912F7;
+	-ms-box-shadow: 0px 0px 1px 2px #6912F7;
+}
+.fifty {
+	float: left;
+	width: 25%;
+	margin-right: 5%;
+}
+.no_right {
+	margin-right: 0;
+}
+.fifty select {
+	width: 100%;
+}
+.fifty select {
+	border: 1px solid #E4E4E4;
+	height: 45px;
+	line-height: 45px;
+	border-radius: 3px;
+	font-size: 13px;
+	color: #C7C7C7;
+	padding: 0 10px;
+}
+.fifty input[type="text"] {
+	display: inline-block;
+	height: 44px;
+	line-height: 44px;
+	width: 83px !important;
+	/* margin: 0 !important; */
+	/* padding: ; */
+	float: left;
+}
+.checkb {
+	float: left;
+	width: 100%;
+	text-align: left;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.left_right em {
+	float: left;
+	font-size: 14px;
+	margin-left: 10px;
+}
+.digit img {
+	position: relative !important;
+	float: left;
+	margin-right: 5px;
+	right: 0 !important;
+	top: 0 !important;
+	float: left;
+}
+.digit {
+	float: right;
+}
+#checkbox {
+	float: left;
+	width: auto !important;
+}
+.digit {
+	float: left;
+	margin-top: 38px;
+	margin-left: -50px;
+}
+/* Hide the browser's default radio button */
+.c_check {
+	position: relative;
+	float: left;
+}
+.c_check input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	width: auto !important;
+	border: 0 !important;
+	padding: 0 !important;
+}
+/* Create a custom radio button */
+.c_check .checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 22px;
+	width: 22px;
+	background-color: #fff;
+	border-radius: 50%;
+	border: 2px solid #9FA3A5;
+}
+/* On mouse-over, add a grey background color */
+.c_check:hover input ~ .checkmark {
+	background-color: #fff;
+}
+/* When the radio button is checked, add a blue background */
+.c_check input:checked ~ .checkmark {
+	background-color: #fff;
+	border-color: #6912F7;
+}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.c_check .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+/* Show the indicator (dot/circle) when checked */
+.c_check input:checked ~ .checkmark:after {
+	display: block;
+	background: #6912F7;
+}
+/* Style the indicator (dot/circle) */
+.c_check .checkmark::after {
+	top: 5px;
+	left: 5px;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background: white;
+}
+.custom_DIV {
+	display: inline-block;
+	width: 50%;
+	border-top: 1px solid #F1F1F2;
+	padding: 1rem 0;
+	position: relative;
+	float: left;
+}
+.join_D {
+	float: left;
+	margin-left: 50px;
+	margin-top: 4px;
+	vertical-align: top;
+}
+.join_D em {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 4px;
+	margin-left: 20px;
+	color: #191945;
+	font-size: 17px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.less_margin {
+	margin-bottom: 20px;
+	font-weight: 300;
+	margin-top: 20px;
+}
+em {
+	font-style: normal;
+}
+.less_margin em {
+	font-style: normal;
+	color: #6912F7;
+}
+.clearfix {
+	clear: both;
+}
+a.c_d {
+	color: #009DE2;
+	font-weight: 500;
+	font-size: 16px;
+	margin-top: 30px;
+	text-decoration: none;
+	float: left;
+	margin-bottom: 50px;
+}
+.div_part {
+	float: left;
+	width: 50%;
+	margin-top: 25px;
+	text-align: left;
+}
+.div_part h1 {
+	font-weight: 500;
+	color: #191945;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.div_part h2 {
+	font-size: 25px;
+	color: #F8931A;
+	margin-bottom: 25px;
+}
+.div_part h3 {
+	font-weight: 400;
+	color: #191945;
+	font-size: 25px;
+	margin-bottom: 8rem;
+}
+.div_part2 {
+	float: right;
+}
+.div_part2 img {
+}
+.cards ul li {
+	display: inline-block;
+	margin: 0 0 1.5rem;
+	padding: 0;
+	width: 100px;
+}
+.cards ul {
+	display: block;
+	margin: 4rem 0;
+	padding: 0;
+	text-align: center;
+}
+.cards u li {
+	margin: 0 5px;
+}
+.widTH {
+	width: 45%;
+}
+.fifty.widTH input[type="text"] {
+	width: 100% !important;
+}
+.b20 {
+	margin-bottom: 20px!important;
+}
+.zero {
+	padding: 0;
+}
+.forwrd {
+	float: right;
+	width: 585px !important;
+	margin-top: -100px !important;
+}
+.div_c3 {
+	padding: 0 130px !important;
+	/* float: left !important; */
+	display: block;
+	position: relative;
+	top: 50px;
+}
+.div_c3 h2 {
+	margin-bottom: 2rem;
+}
+.div_c4 {
+	padding: 0 130px !important;
+}
+.div_c4 h6 {
+	font-size: 30px;
+	font-weight: 700;
+	margin: 20px 0 40px;
+	text-align: left;
+}
+.fifty.widTH:last-child {
+	margin-right: 0;
+	float: right;
+}
+ @media(max-width:1024px) {
+.payment_msform {
+	width: 90%;
+}
+}
+ @media(max-width:767px) {
+#progressbar li {
+	font-size: 13px;
+}
+.tit {
+	font-size: 18px;
+	margin-bottom: 20px;
+	display: inline-block;
+	width: 100%;
+}
+.div_c, .div_c2 {
+	max-width: 100%;
+}
+#progressbar {
+	margin-bottom: 30px;
+	display: inline-block;
+	width: 100%;
+}
+.payment_msform fieldset {
+	padding: 0;
+}
+.div_c4 {
+	padding: 0 !important;
+}
+.div_c3 {
+	padding: 0 !important;
+	top: 0;
+}
+.payment_msform .action-button {
+	margin: 10px 0 !important;
+	width: 100% !important;
+}
+.payment_msform {
+	width: 100%;
+	float: left;
+	padding: 0 4%;
+	text-align: left;
+	box-sizing: border-box;
+	margin: 10px 0;
+}
+#progressbar li em {
+	margin-top: 0;
+}
+.pur_ple {
+	top: 34%;
+}
+#progressbar li em {
+	text-align: center;
+}
+.forwrd {
+	float: none;
+	width: 94% !important;
+	margin: 0 auto !important;
+}
+.form1 h1 {
+	float: left;
+	color: #272750;
+	font-size: 13px;
+	text-align: left;
+	font-weight: 400;
+	width: 100%;
+}
+}
