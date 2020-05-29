@@ -18,24 +18,24 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-			  "src/assets/css/css2.css",
-			  "src/assets/css/style.css",
-			  "src/assets/css/easy-responsive-tabs.css",
-			  "src/assets/css/tab.css",
+              "src/assets/css/css2.css",
+              "src/assets/css/style.css",
+              "src/assets/css/easy-responsive-tabs.css",
+              "src/assets/css/tab.css",
               "src/styles.css"
             ],
             "scripts": [
-			  "src/assets/js/jquery.min.js",
+              "src/assets/js/jquery.min.js",
               "src/assets/js/jquery.easing.min.js",
               "src/assets/js/script.js",
               "src/assets/js/jquery.easyResponsiveTabs.js"
-			]
+            ]
           },
           "configurations": {
             "production": {
@@ -50,7 +50,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -129,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "multipaymentgateway"
+    }
+  },
+  "defaultProject": "multipaymentgateway",
+  "cli": {
+    "analytics": "1bb932f4-fae8-49c5-9059-6981715c397c"
+  }
 }
