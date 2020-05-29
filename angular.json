@@ -31,8 +31,7 @@
             ],
             "scripts": [
 			  "src/assets/js/jquery.min.js",
-              "src/assets/js/jquery.easing.min.js",
-              "src/assets/js/custom.js"
+              "src/assets/js/jquery.easing.min.js"
 			]
           },
           "configurations": {
