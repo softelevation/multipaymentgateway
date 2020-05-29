@@ -12,6 +12,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { PaymentDetailsComponent } from './payment-details/payment-details.component';
 import { StripeComponent } from './payment/stripe/stripe.component';
 import { PaypalComponent } from './payment/paypal/paypal.component';
+import { BitcoinComponent } from './payment/bitcoin/bitcoin.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PaypalComponent } from './payment/paypal/paypal.component';
     UserDetailsComponent,
     PaymentDetailsComponent,
     StripeComponent,
-    PaypalComponent
+    PaypalComponent,
+    BitcoinComponent
   ],
   imports: [
     BrowserModule,
